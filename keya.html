@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="spm.ico" />
+    <title>Keya । Siva on Facebook</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        #openLink {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        #openLink:hover {
+            background-color: #218838;
+        }
+
+        #message {
+            font-size: 1.2rem;
+            color: #888;
+            display: none;
+        }
+    </style>
+</head>
+<BODY oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <h3>কেয়ার জন্য সফটওয়্যারের লিংক</h3>
+    <button id="openLink">এই বাটনে ক্লিক করলেই পেজ খুলে যাবে</button>
+    <p>("for $49 one-time price!" ভার্সনটা কিনলেই হবে)</p>
+
+    <script>
+        const button = document.getElementById('openLink');
+
+        // Button click handler
+        button.addEventListener("click", function () {
+            window.open('https://paykstrt.com/48893/160030', '_self');
+        });
+
+        // Disable right-click
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // Disable common key shortcuts
+        document.addEventListener('keydown', function (e) {
+            if (
+                e.key === 'F12' ||
+                (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
+                (e.ctrlKey && (e.key === 'U' || e.key === 'C' || e.key === 'S'))
+            ) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
