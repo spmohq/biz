@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #ffffff; }
+    header, footer { background-color: #f8f9fa; padding: 1rem; text-align: center; }
+    main { padding: 2rem; max-width: 960px; margin: 0 auto; }
+    form { background: #f1f1f1; padding: 2rem; border-radius: 8px; }
+    input, textarea { width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
+    button { padding: 0.75rem 1.5rem; background: #007bff; color: #fff; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; }
+    button:hover { background: #0056b3; }
+
+    @media (max-width: 768px) {
+      main { padding: 1rem; }
+      button { width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      header, footer { padding: 0.5rem; }
+      h1 { font-size: 1.5rem; }
+      p, label { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+  <button class="close-btn" onclick="window.close()">Close ✕</button>
+  <header>
+    <h1>Contact Us</h1>
+    <p>Have questions or feedback? Send us a message below.</p>
+  </header>
+  <main>
+    <form action="https://formsubmit.co/sivamukherjee@gmail.com" method="POST" class="max-w-2xl mx-auto text-left space-y-4">
+      <!-- Name -->
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg text-gray-800" />
+
+      <!-- Email -->
+      <input type="email" name="email" placeholder="Your Email Address" required class="w-full p-3 rounded-lg text-gray-800" />
+
+      <!-- Message -->
+      <textarea name="message" placeholder="Your Message" rows="6" required class="w-full p-3 rounded-lg text-gray-800"></textarea>
+
+      <!-- Autoresponse -->
+      <input type="hidden" name="_autoresponse" value="Thank you for contacting us! We’ve received your message and will respond shortly.">
+
+      <!-- Optional redirect -->
+      <input type="hidden" name="_next" value="thank-you.html" />
+
+      <!-- Honeypot -->
+      <input type="text" name="_honey" style="display:none" />
+
+      <!-- Submit -->
+      <button type="submit" class="w-full bg-[#AED581] text-[#0A2A66] font-semibold py-3 rounded-xl hover:bg-[#9CCC65] transition">
+        Send Message
+      </button>
+    </form>
+  </main>
+  <footer>
+    <p>Copyright © <script>document.write(new Date().getFullYear())</script>.&nbsp;Siva Prasad Mukherjee. All rights reserved.</p>
+    <p>
+      <a href="#" onclick="openPopup('cookie-policy.html')">Cookie Policy</a> |
+      <a href="#" onclick="openPopup('terms-conditions.html')">Terms & Conditions</a> |
+      <a href="#" onclick="openPopup('privacy-policy.html')">Privacy Policy</a> |
+      <a href="#" onclick="openPopup('contact.html')">Contact Us</a>
+    </p>
+  </footer>
+  <script>
+    function openPopup(url) {
+      window.open(url, '_blank', 'width=600,height=500,scrollbars=yes,resizable=yes');
+    }
+    document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || (e.ctrlKey && (e.key === 'U' || e.key === 'C' || e.key === 'S')))
+            e.preventDefault();
+    });
+  </script>
+</body>
+</html>
