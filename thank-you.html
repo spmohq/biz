@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thank You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #e6f2ed;
+      color: #2a4f6e;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Thank You for Your Purchase!</h1>
+  <p>Your payment was successful.</p>
+  <p>This window will close automatically.</p>
+
+  <script>
+    setTimeout(() => {
+      window.close();
+    }, 5000);
+  </script>
+</body>
+</html>
