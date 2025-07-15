@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>এ আই দিয়ে ছবি বানান</title>
+
+  <!-- Google Fonts: Noto Sans Bengali (from same.html) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- MODIFICATION: Added Brand Colors from same.html --- */
+    :root {
+      --brand-blue: #2a4f6e;
+      --brand-gold: #d9a441;
+      --card-bg: #ffffff;
+      --border-color: #e0e0e0;
+    }
+
+    /* --- MODIFICATION: Added Header Styles from same.html --- */
+    header {
+      background: var(--card-bg);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .logo img {
+      height: 45px;
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .site-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--brand-blue);
+    }
+    .tagline {
+      font-size: 13px;
+      font-weight: 500;
+      color: #5a748c;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      /* MODIFICATION: Using brand font and background */
+      font-family: 'Noto Sans Bengali', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f2ed;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 100%; /* 1:1 Aspect Ratio */
+      background-color: #000;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      /* MODIFICATION: Using brand blue for the heading */
+      color: var(--brand-blue);
+      margin-bottom: 24px;
+    }
+
+    .cta-button {
+      margin-top: 30px;
+      padding: 14px 32px;
+      /* MODIFICATION: Using brand gold for button color */
+      background: var(--brand-gold);
+      color: #000; /* Updated for better contrast on gold */
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 999px;
+      /* MODIFICATION: Shadow updated to reflect gold color */
+      box-shadow: 0 8px 20px rgba(217, 164, 65, 0.4);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      /* MODIFICATION: Using darker gold for hover, consistent with same.html */
+      background-color: #c49037;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(196, 144, 55, 0.4);
+    }
+    
+    /* --- MODIFICATION: Added Header Responsive Style from same.html --- */
+    @media(max-width: 768px) {
+        header { 
+            flex-direction: column; gap: 15px; padding: 20px; text-align: center;
+        }
+    }
+  </style>
+</head>
+<body>
+  <!-- --- MODIFICATION: Added Header from same.html --- -->
+  <header>
+    <div class="logo">
+      <img src="name.jpg" alt="SPM Lab Logo">
+      <div class="logo-text">
+        <span class="site-name">SPMukherjee.online</span>
+        <span class="tagline">Multimedia Creator | Digital Marketing Specialist | Content Writer</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>এ আই দিয়ে ছবি বানান</h1>
+
+    <div class="video-wrapper">
+      <video controls poster="https://via.placeholder.com/600x600?text=Video+Loading...">
+        <source src="https://sivaonfb.online/aiimage.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+<div style="padding-top: 10px;"> </div>
+    <button class="cta-button" onclick="redirectToURL()">👉 এরকম আরো ছবি বানাতে এখানে ক্লিক করুন</button>
+<div style="padding-top: 30px;"> </div>
+
+    <div class="video-wrapper">
+      <video controls poster="https://via.placeholder.com/600x600?text=Video+Loading...">
+        <source src="https://sivaonfb.online/artisly.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+<div style="padding-top: 10px;"> </div>
+    <!-- CTA Button using JavaScript to hide URL -->
+    <button class="cta-button" onclick="redirectToURL()">👉 এরকম ছবি বানাতে এখানে ক্লিক করুন</button>
+  </div>
+
+  <script>
+    function redirectToURL() {
+      // Redirect without exposing the URL until clicked
+      const url = "https://paykstrt.com/48893/160030";
+      window.open(url, "_blank"); // Open in new tab
+    }
+  </script>
+</body>
+</html>
