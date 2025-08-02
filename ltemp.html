@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="bn-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>রেসপন্সিভ পাঠের টেমপ্লেট</title>
+    <style>
+        /* ---  General & Reset Styles --- */
+        :root {
+            --primary-color: #005A9C; /* A professional blue */
+            --secondary-color: #009FBD; /* A vibrant teal for accents */
+            --text-color: #333333;
+            --bg-color: #f4f7f9;
+            --container-bg: #ffffff;
+            --code-bg: #eef1f3;
+            --border-color: #dddddd;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-size: 16px;
+        }
+
+        /* --- Main Container --- */
+        .lesson-container {
+            max-width: 800px; /* Limits width on large screens for readability */
+            margin: 2rem auto; /* Centers the container and adds vertical space */
+            padding: 2.5rem; /* Generous padding for a clean look */
+            background-color: var(--container-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border-color);
+        }
+
+        /* --- Typography & Content Styles --- */
+        h3, h4 {
+            line-height: 1.3;
+        }
+
+        h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        h3 .emoji, h4 .emoji {
+            font-size: 1.2em; /* Makes emoji slightly larger than text */
+            margin-right: 0.75rem;
+            line-height: 1;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-position: outside;
+            padding-left: 25px; /* Indent list items */
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover, a:focus {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+        
+        /* --- Specific Section Styling --- */
+        .dos-donts strong {
+           color: var(--text-color); /* Resetting default strong color if needed */
+        }
+
+        .dos-list strong {
+            color: var(--success-color);
+        }
+        
+        .donts-list strong {
+            color: var(--danger-color);
+        }
+        
+        /* --- Code Block Styling --- */
+        code {
+            display: block;
+            background-color: var(--code-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: "SF Mono", "Fira Code", "Consolas", "Menlo", monospace;
+            font-size: 0.95rem;
+            color: #333;
+            white-space: pre-wrap;      /* Allows text to wrap */
+            word-wrap: break-word;      /* Breaks long words if necessary */
+            border: 1px solid var(--border-color);
+        }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px; /* Slightly smaller base font on mobile */
+            }
+
+            .lesson-container {
+                margin: 1rem; /* Less margin on smaller screens */
+                padding: 1.5rem; /* Less padding to maximize content area */
+            }
+
+            h3 {
+                font-size: 1.75rem;
+            }
+
+            h4 {
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+             .lesson-container {
+                margin: 0;
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+             }
+        }
+
+    </style>
+</head>
+<body>
+
+    <main class="lesson-container">
+
+        <h3><span class="emoji">🧩</span> ধাপ ১: <em>[পাঠের শিরোনাম – উদ্দেশ্য]</em></h3>
+
+        <h4><span class="emoji">🎯</span> পাঠের ভূমিকা</h4>
+        <p><em>এই পাঠটি কী সম্পর্কে এবং এটি কেন গুরুত্বপূর্ণ তা ব্যাখ্যা করুন। এই বিভাগটি শিক্ষার্থীদের জন্য মঞ্চ তৈরি করে, প্রসঙ্গ এবং প্রেরণা প্রদান করে। একটি ভাল ভূমিকা ব্যবহারকারীকে শুরু থেকেই নিযুক্ত করার জন্য "কী?" এবং "কেন?" এই প্রশ্নগুলির উত্তর দেয়।</em></p>
+
+        <h4><span class="emoji">🛠️</span> কীভাবে এটি করবেন</h4>
+        <p><em>ধাপে ধাপে নির্দেশিকা বা প্রক্রিয়া ব্যাখ্যা। স্পষ্ট, সংক্ষিপ্ত ভাষা ব্যবহার করুন। যদি প্রক্রিয়াটি জটিল হয়, তাহলে আরও ভাল স্পষ্টতার জন্য একটি numerated list (`&lt;ol&gt;`) ব্যবহার করার কথা বিবেচনা করুন। এটি পাঠের মূল নির্দেশনামূলক অংশ।</em></p>
+
+        <h4><span class="emoji">🤖</span> ChatGPT প্রম্পট টেমপ্লেট</h4>
+        <code>[এখানে পুনরায় ব্যবহারযোগ্য প্রম্পট যোগ করুন। উদাহরণস্বরূপ:
+
+নিম্নলিখিত পাঠ্যটি তার প্রাথমিক যুক্তি, সহায়ক পয়েন্ট এবং সামগ্রিক সুরের জন্য বিশ্লেষণ করুন। তিনটি বুলেট পয়েন্টে একটি সারসংক্ষেপ প্রদান করুন।
+
+পাঠ্য: "[এখানে পাঠ্য পেস্ট করুন]"]
+</code>
+
+        <div class="dos-donts">
+            <h4><span class="emoji">✅</span> করণীয় এবং <span class="emoji">❌</span> বর্জনীয়</h4>
+            <div class="dos-list">
+                <strong>করণীয়:</strong>
+                <ul>
+                    <li>আপনার নির্দেশাবলীতে নির্দিষ্ট এবং স্পষ্ট হন।</li>
+                    <li>AI-কে কাজটি বুঝতে সাহায্য করার জন্য প্রসঙ্গ সরবরাহ করুন।</li>
+                    <li>আরও ভাল ফলাফলের জন্য বিভিন্ন শব্দগুচ্ছ দিয়ে পরীক্ষা করুন।</li>
+                </ul>
+            </div>
+            <div class="donts-list">
+                <strong>বর্জনীয়:</strong>
+                <ul>
+                    <li>অস্পষ্ট বা দ্ব্যর্থক অনুরোধ এড়িয়ে চলুন।</li>
+                    <li>একটি একক প্রম্পটে একাধিক সম্পর্কহীন প্রশ্ন জিজ্ঞাসা করবেন না।</li>
+                    <li>আগে থেকে বলা নেই এমন প্রসঙ্গ AI জানে, এটা ধরে নেওয়া এড়িয়ে চলুন।</li>
+                </ul>
+            </div>
+        </div>
+
+        <h4><span class="emoji">🔗</span> টুলস এবং রিসোর্স</h4>
+        <ul>
+            <li><a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a> – প্রম্পটগুলি চালানোর জন্য AI টুল।</li>
+            <li><a href="https://example.com/prompt-guide" target="_blank" rel="noopener noreferrer">প্রম্পটিং গাইড</a> – কার্যকর AI প্রম্পট লেখার জন্য একটি বিস্তারিত গাইড।</li>
+            <li><a href="https://example.com/lesson-examples" target="_blank" rel="noopener noreferrer">পাঠের উদাহরণ</a> – এই পাঠের উপর ভিত্তি করে সম্পূর্ণ উদাহরণ দেখুন।</li>
+        </ul>
+
+        <h4><span class="emoji">✅</span> পাঠের উপসংহার</h4>
+        <p><em>কী কভার করা হয়েছে এবং পরবর্তীতে কী আসবে তার সারসংক্ষেপ। শেখা বিষয়কে আরও শক্তিশালী করতে মূল বিষয়গুলি সংক্ষেপে পুনরালোচনা করুন। আপনি শিক্ষার্থীকে পরবর্তী পাঠের দিকে নির্দেশ করতে পারেন বা তাদের নতুন দক্ষতা অনুশীলনের উপায় প্রস্তাব করতে পারেন।</em></p>
+
+    </main>
+
+</body>
+</html>
