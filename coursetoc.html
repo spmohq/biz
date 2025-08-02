@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="bn-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কোর্স আউটলাইন</title>
+    <style>
+        /* ---  General & Reset Styles --- */
+        :root {
+            --primary-color: #005A9C; /* A professional blue */
+            --secondary-color: #009FBD; /* A vibrant teal for accents */
+            --text-color: #333333;
+            --bg-color: #f4f7f9;
+            --container-bg: #ffffff;
+            --code-bg: #eef1f3;
+            --border-color: #dddddd;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-size: 16px;
+        }
+
+        /* --- Main Container --- */
+        .lesson-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            background-color: var(--container-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border-color);
+        }
+
+        /* --- Typography & Content Styles --- */
+        h3, h4 {
+            line-height: 1.3;
+        }
+
+        h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        h3 .emoji, h4 .emoji {
+            font-size: 1.2em;
+            margin-right: 0.75rem;
+            line-height: 1;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-position: outside;
+            padding-left: 25px;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover, a:focus {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+        
+        /* --- Placeholder & Button Styles --- */
+        .placeholder-box {
+            background-color: var(--code-bg);
+            border: 2px dashed var(--border-color);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 2.5rem 0;
+            border-radius: 8px;
+            color: #888;
+            font-family: "SF Mono", "Fira Code", "Consolas", "Menlo", monospace;
+            font-size: 1.2rem;
+        }
+
+        .action-buttons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #004a80; /* Darker blue */
+            color: white;
+            text-decoration: none;
+        }
+        
+        .btn-secondary {
+            background-color: var(--code-bg);
+            color: var(--primary-color);
+            border-color: var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #e0e5e8; /* Slightly darker grey */
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+            .lesson-container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            h3 {
+                font-size: 1.75rem;
+            }
+            h4 {
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+             .lesson-container {
+                margin: 0;
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+             }
+             .action-buttons {
+                flex-direction: column;
+             }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="lesson-container">
+
+        <h4><span class="emoji">📚</span> মূল কোর্স (Main Course)</h4>
+        <ul>
+            <li>মডিউল ১: ভূমিকা</li>
+            <li>মডিউল ২: নিজেকে প্রস্তুত করুন</li>
+            <li>মডিউল ৩: নিজের আয়ের ক্ষেত্র প্রস্তুত করুন</li>
+            <li>মডিউল ৪: নিজের আয়ের পথ প্রস্তুত করুন</li>
+            <li>মডিউল ৫: নিজের আয় শুরু করুন</li>
+            <li>মডিউল ৬: নিজের আয়কে সুরক্ষিত করুন</li>
+            <li>মডিউল ৭: উপসংহার</li>
+        </ul>
+
+        <h4><span class="emoji">🛡️</span> নিজের আয়কে সুরক্ষিত করুন</h4>
+        <ul>
+            <li>পেশাদারভাবে সার্ভিস ডেলিভারি করুন</li>
+            <li>পেমেন্ট ও ক্লায়েন্ট ফিডব্যাক হ্যান্ডেল করা</li>
+            <li>ক্যারিয়ার গ্রো করান</li>
+            <li>সাধারণ ভুলগুলো এড়িয়ে চলুন</li>
+        </ul>
+
+        <div class="placeholder-box">
+            Image Placeholder<br>(600x400)
+        </div>
+        
+        <div class="action-buttons">
+            <a href="#" class="btn btn-primary">অধ্যায় যোগ করুন</a>
+            <a href="#" class="btn btn-secondary">অধ্যায়ের আইটেম যোগ করুন</a>
+        </div>
+
+    </main>
+
+</body>
+</html>
